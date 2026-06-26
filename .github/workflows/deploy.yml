@@ -7,18 +7,18 @@ on:
       - main
   workflow_dispatch:
 
-# Allow this workflow to deploy to Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
+  # Builds and validates the static export. Runs independently of GitHub Pages
+  # being enabled, so this check reflects the health of the actual code.
   build:
     runs-on: ubuntu-latest
     steps:
@@ -34,23 +34,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - name: Build (static export)
         env:
-          # Serve the project site from /<repo> with the correct casing
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # Project site is served from /<repo>
+          NEXT_PUBLIC_BASE_PATH: /reliableCleaning
         run: npm run build
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
+  # Publishes to GitHub Pages. Requires Pages to be enabled for the repo
+  # (Settings → Pages → Source: GitHub Actions). On a free plan the repo must
+  # be public.
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -58,6 +55,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
