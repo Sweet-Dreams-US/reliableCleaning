@@ -17,32 +17,34 @@ html {
 }
 
 body {
-  background: #060d18;
-  color: #e8eef6;
+  background: #f6fbfb;
+  color: #0f2233;
   overflow-x: hidden;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
 }
 ::-webkit-scrollbar-track {
-  background: #060d18;
+  background: #eaf3f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #14b8a6, #0d2440);
+  background: #9bd5cf;
   border-radius: 8px;
+  border: 2px solid #eaf3f4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5fc0b6;
 }
 
-/* Selection */
 ::selection {
   background: #14b8a6;
-  color: #060d18;
+  color: #ffffff;
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(120deg, #5eead4 0%, #22d3ee 50%, #14b8a6 100%);
+    background: linear-gradient(100deg, #0ea5e9 0%, #14b8a6 55%, #34d399 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -52,31 +54,19 @@ body {
     text-wrap: balance;
   }
 
-  .glass {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Light frosted card */
+  .card-soft {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 34, 51, 0.06);
+    box-shadow: 0 1px 2px rgba(15, 34, 51, 0.04),
+      0 12px 32px -16px rgba(15, 34, 51, 0.12);
   }
 
-  .glass-strong {
-    background: rgba(13, 36, 64, 0.55);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(94, 234, 212, 0.14);
+  .ring-soft {
+    box-shadow: 0 1px 2px rgba(15, 34, 51, 0.04),
+      0 18px 50px -24px rgba(20, 184, 166, 0.35);
   }
-
-  .shimmer-border {
-    position: relative;
-    background-clip: padding-box;
-  }
-
-  .noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
-  }
-}
-
-/* Reveal helper for scroll animations without JS fallback */
-.will-reveal {
-  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {

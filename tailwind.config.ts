@@ -7,22 +7,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette — trust, freshness, premium
+        // Brand palette — bright, fresh & airy
         ink: {
-          DEFAULT: "#0a1626",
-          50: "#f3f6fa",
-          900: "#0a1626",
-          950: "#060d18",
+          DEFAULT: "#0f2233",
+          50: "#f3f7f9",
+          500: "#475a6b",
+          900: "#0f2233",
+          950: "#081722",
         },
-        deep: "#0d2440",      // deep navy
         teal: {
           DEFAULT: "#14b8a6",
           light: "#5eead4",
           dark: "#0f766e",
         },
+        sky: "#0ea5e9",
+        emerald: "#34d399",
         aqua: "#22d3ee",
-        sand: "#f5f3ee",
-        gold: "#e9c46a",
+        mist: "#eaf3f4",
+        sand: "#f6fbfb",
+        gold: "#e0a92e",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],

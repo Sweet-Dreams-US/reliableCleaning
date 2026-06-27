@@ -26,14 +26,14 @@ export function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal/10 blur-[140px]" />
+    <section className="relative overflow-hidden bg-sand py-24 sm:py-32">
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal/10 blur-[140px]" />
       <div className="mx-auto max-w-4xl px-6 text-center">
         <Reveal>
-          <span className="text-sm font-600 uppercase tracking-[0.2em] text-teal-light">
+          <span className="text-sm font-700 uppercase tracking-[0.2em] text-teal-dark">
             Client voices
           </span>
-          <h2 className="mt-4 font-display text-4xl font-800 tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-4 font-display text-4xl font-800 tracking-tight text-ink sm:text-5xl">
             Trusted by the people who
             <br />
             <span className="text-gradient">can&rsquo;t afford a mess.</span>
@@ -41,7 +41,7 @@ export function Testimonials() {
         </Reveal>
 
         <div className="relative mt-14 min-h-[20rem]">
-          <Quote className="mx-auto h-12 w-12 text-teal/40" />
+          <Quote className="mx-auto h-12 w-12 text-teal/30" />
           <AnimatePresence mode="wait" custom={dir}>
             <motion.div
               key={index}
@@ -57,12 +57,12 @@ export function Testimonials() {
                   <Star key={i} className="h-5 w-5 fill-gold text-gold" />
                 ))}
               </div>
-              <p className="mx-auto max-w-2xl text-balance font-display text-2xl font-600 leading-snug text-white sm:text-3xl">
+              <p className="mx-auto max-w-2xl text-balance font-display text-2xl font-600 leading-snug text-ink sm:text-3xl">
                 &ldquo;{active.quote}&rdquo;
               </p>
               <div className="mt-7">
-                <p className="font-600 text-teal-light">{active.name}</p>
-                <p className="text-sm text-slate-400">{active.role}</p>
+                <p className="font-700 text-teal-dark">{active.name}</p>
+                <p className="text-sm text-ink-500">{active.role}</p>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -72,7 +72,7 @@ export function Testimonials() {
           <button
             onClick={() => go(-1)}
             aria-label="Previous testimonial"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-teal/40 hover:bg-white/5"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white text-ink transition hover:border-teal/40 hover:text-teal-dark"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -86,7 +86,7 @@ export function Testimonials() {
                   setIndex(i);
                 }}
                 className={`h-2 rounded-full transition-all ${
-                  i === index ? "w-8 bg-teal" : "w-2 bg-white/20"
+                  i === index ? "w-8 bg-teal" : "w-2 bg-ink/20"
                 }`}
               />
             ))}
@@ -94,7 +94,7 @@ export function Testimonials() {
           <button
             onClick={() => go(1)}
             aria-label="Next testimonial"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-teal/40 hover:bg-white/5"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white text-ink transition hover:border-teal/40 hover:text-teal-dark"
           >
             <ChevronRight className="h-5 w-5" />
           </button>

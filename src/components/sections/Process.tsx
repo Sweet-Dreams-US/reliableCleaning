@@ -14,24 +14,20 @@ export function Process() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section
-      id="process"
-      className="relative overflow-hidden bg-ink-950/40 py-24 sm:py-32"
-    >
-      <div className="pointer-events-none absolute right-0 top-1/3 h-96 w-96 rounded-full bg-deep/40 blur-[120px]" />
+    <section id="process" className="relative overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.4fr]">
           <div className="lg:sticky lg:top-32 lg:h-fit">
             <Reveal>
-              <span className="text-sm font-600 uppercase tracking-[0.2em] text-teal-light">
+              <span className="text-sm font-700 uppercase tracking-[0.2em] text-teal-dark">
                 How we work
               </span>
-              <h2 className="mt-4 font-display text-4xl font-800 tracking-tight text-white sm:text-5xl">
+              <h2 className="mt-4 font-display text-4xl font-800 tracking-tight text-ink sm:text-5xl">
                 A proven process,
                 <br />
                 <span className="text-gradient">repeated flawlessly.</span>
               </h2>
-              <p className="mt-5 max-w-md text-lg text-slate-400">
+              <p className="mt-5 max-w-md text-lg text-ink-500">
                 Consistency is a system, not a promise. Here&rsquo;s exactly how
                 we turn a first walkthrough into spotless results you never have
                 to think about.
@@ -41,10 +37,10 @@ export function Process() {
 
           <div ref={ref} className="relative">
             {/* Progress rail */}
-            <div className="absolute left-[27px] top-2 h-full w-px bg-white/10">
+            <div className="absolute left-[27px] top-2 h-full w-0.5 bg-ink/10">
               <motion.div
                 style={{ height: lineHeight }}
-                className="w-full bg-gradient-to-b from-teal-light to-teal"
+                className="w-full bg-gradient-to-b from-sky to-teal"
               />
             </div>
 
@@ -58,14 +54,14 @@ export function Process() {
                   transition={{ duration: 0.6, delay: i * 0.05 }}
                   className="relative flex gap-6 pl-1"
                 >
-                  <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-teal/30 bg-ink-950 font-display text-lg font-700 text-teal-light shadow-[0_0_24px_-6px_rgba(20,184,166,0.6)]">
+                  <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-teal/30 bg-white font-display text-lg font-700 text-teal-dark shadow-[0_8px_24px_-10px_rgba(20,184,166,0.6)]">
                     {p.step}
                   </div>
                   <div className="pt-1.5">
-                    <h3 className="font-display text-2xl font-700 text-white">
+                    <h3 className="font-display text-2xl font-700 text-ink">
                       {p.title}
                     </h3>
-                    <p className="mt-2 max-w-lg leading-relaxed text-slate-400">
+                    <p className="mt-2 max-w-lg leading-relaxed text-ink-500">
                       {p.body}
                     </p>
                   </div>
