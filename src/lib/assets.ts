@@ -11,7 +11,8 @@ export const media = {
   roomClean: `${CDN}/hf_20260627_001611_e5359847-3327-425b-bdda-b37ad37430c5.png`,
 
   // The transformation video (frame 1 -> frame 3, cleaning in between).
-  transformVideo: `${CDN}/hf_20260627_001728_f8881185-440d-49cd-aca1-b373f1c85e69.mp4`,
+  // 10s clip — more frames make the scroll-scrub noticeably smoother.
+  transformVideo: `${CDN}/hf_20260627_005439_b72321ca-8fa5-45d2-b3e3-2bd5981ff1a5.mp4`,
 
   // Legacy product shot, still used as a small accent.
   sprayBottle: `${CDN}/hf_20260626_211820_b7b9e252-301f-4ac9-9a09-2210422afbcf.png`,
