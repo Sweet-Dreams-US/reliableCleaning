@@ -16,3 +16,5 @@
 @media(max-width:700px){.owner-photos{grid-template-columns:1fr}}
 .no-motion .room-label span{font-size:16px}.no-motion .room-label strong{font-size:17px}
 .logo-full{height:44px;width:auto;max-width:140px}@media(max-width:700px){.logo-mark{height:36px;width:36px}}
+.process-node.is-selected .stage-num{background:var(--aqua);color:var(--night)}.process-node.is-selected h2{color:var(--aqua)}.process-detail{display:grid;grid-template-columns:1fr 1.5fr;gap:50px;align-items:center;min-height:265px;margin-top:25px;border-top:1px solid #304258;padding:25px 0}.process-detail h3{font-size:38px;margin:0}.process-detail .service-list{margin:0;gap:0 30px}.process-detail li{font-size:21px}.process-detail+.return-loop{margin-top:5px}
+@media(min-width:901px){.process-node:not(.is-selected) .stage-num{background:var(--night);color:var(--aqua)}.process-node:not(.is-selected) h2{color:var(--white)}}

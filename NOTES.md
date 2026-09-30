@@ -25,3 +25,5 @@ Every route checked at 1440×900 and 375×812. Every quote button opens the moda
 No changes were made to reliable-clean.com or its domain configuration.
 
 Production: https://reliable-cleaning-chi.vercel.app . Fresh public browser checks passed on all routes at both requested viewports. JobLink opens in new tabs. Source notes and excluded stock images return 404. Android at 360 pixels under Slow 4G loaded about 642 KB. Live screenshots are shots/desktop.png (1440×900) and shots/mobile.png (375×812).
+
+The desktop Process diagram pins for 250vh and advances through all seven stages. Each stage can also be selected directly. Phone and reduced motion keep native expandable points. Every route marks its current footer link, and secondary About pages mark the About navigation section.
