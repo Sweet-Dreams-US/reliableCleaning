@@ -23,3 +23,5 @@ Reviewed https://www.abm.com/, https://www.janiking.com/, https://www.issworld.c
 Every route checked at 1440×900 and 375×812. Every quote button opens the modal without URL changes; service preselection, Back, submission to inbox and admin edits verified. JavaScript disabled checks at 320, 360, 390 and 430 pixels; reduced motion morning state checked. Banned copy and dash scans pass on public HTML and data. Visual checks cover lights down, clock, marker, room cleaning and morning, title bands and process brackets and return loop.
 
 No changes were made to reliable-clean.com or its domain configuration.
+
+Production: https://reliable-cleaning-chi.vercel.app . Fresh public browser checks passed on all routes at both requested viewports. JobLink opens in new tabs. Source notes and excluded stock images return 404. Android at 360 pixels under Slow 4G loaded about 642 KB. Live screenshots are shots/desktop.png (1440×900) and shots/mobile.png (375×812).
